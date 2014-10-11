@@ -114,7 +114,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'mail.ielecom.org'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'info@ielecom.org'
-EMAIL_HOST_PASSWORD = '12345678faratel'
+EMAIL_HOST_PASSWORD = mail_pass()
 
 
 SENDFILE_BACKEND = 'sendfile.backends.simple'

@@ -117,4 +117,4 @@ EMAIL_HOST_USER = 'info@ielecom.org'
 EMAIL_HOST_PASSWORD = mail_pass()
 
 
-SENDFILE_BACKEND = 'sendfile.backends.simple'
+SENDFILE_BACKEND = 'sendfile.backends.xsendfile'

@@ -1,0 +1,69 @@
+{% extends "main.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1>تماس با صنایع الکترونیک و ارتباطات</h1>
+        <p class="lead orange">شما می توانید با تمامی پل های ارتباطی با ما تماس بگیرید و یا از طریق دکمه زیر فرم ارسال تماس را پر کرده و ما در اولین فرصت به درخواست شما رسیدگی میکنیم.</p>
+        <p><a class="btn btn-lg btn-success center-block" id="modal_key" data-toggle="modal" data-target="#contact" >ارسال درخواست</a></p>
+    </div>
+    <div class="row marketing">
+        <div class="col-lg-6 pull-left">
+            <div class="pull-left visible-xs">
+                <a class=" btn btn-orange"  id="modal_key" data-toggle="modal" data-target="#follow">پیگیری تعمیرات</a>
+            </div>
+            <h2>نقشه گوگل</h2>
+          <p><iframe width="550" height="350" frameborder="0" scrolling="no"  src="https://maps.google.com/maps/ms?msa=0&amp;msid=206900088541960242646.0004e165a46945f8b72fa&amp;ie=UTF8&amp;t=m&amp;ll=35.696968,50.999308&amp;spn=0,0&amp;output=embed"></iframe></p>
+        </div>
+        <div class="col-lg-6 pull-right">
+            <h2>مشخصات تماس</h2>
+            <br/>
+            <h3>تلفن های تماس :   ۶۵۵۶۲۳۷۵ و ۶۵۵۶۱۹۰۰</h3>
+            <h3>موبایل : ۰۹۱۲۵۶۰۵۳۹۸  محمودی</h3>
+            <br/>
+            <h3>آدرس : </h3>
+            <p>اندیشه فاز ۲ , نبش بلوار یاس جنوبی</p>
+
+        </div>
+    </div>
+
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close pull-left" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">فرم درخواست</h4>
+          </div>
+          <div class="modal-body">
+          <div id="result">
+          </div>
+
+            <form  method="post" data-target="result" id="ContactForm">
+            {% csrf_token %}
+                 <div class="form-group">
+                        {{ form_contact.subject.errors }}
+                        <label for="id_subject">موضوع :</label>
+                        {{ form_contact.subject }}
+                 </div>
+                <div class="form-group">
+                        {{ form_contact.email.errors }}
+                        <label for="id_subject">ایمیل :</label>
+                        {{ form_contact.email }}
+                 </div>
+                <div class="form-group">
+                        {{ form_contact.message.errors }}
+                        <label for="id_subject">درخواست :</label>
+                        {{ form_contact.message }}
+                 </div>
+          </div>
+                <div class="modal-footer">
+                <div class="form-group">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+                    <button type="submit" id="SendContact" class="btn btn-primary" >ارسال</button>
+                </div>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+{% endblock %}

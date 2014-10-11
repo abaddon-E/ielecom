@@ -1,0 +1,32 @@
+from django.http import *
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+import json
+from ielecom.form import *
+from contact.models import *
+import datetime
+s
+
+def on_load(request):
+    form = Subscribe()
+    return render_to_response('onload.html', {'form': form}, context_instance=RequestContext(request))
+
+
+def subscribe(request):
+    if request.method == 'POST':
+        form = Subscribe(request.POST)
+        if form. is_valid():
+            email = request.POST['email']
+            client_ip = request.META['REMOTE_ADDR']
+            date = datetime.datetime.today()
+            db_save = Email(email=email, ip=client_ip, date=date)
+            db_save.save()
+            response_dict = {}
+            response_dict.update({'pm': 'success'})
+            return HttpResponse(json.dumps(response_dict), mimetype='application/javascript')
+
+        else:
+            send = "server validation error"
+            response_dict = {}
+            response_dict.update({'server_response': send, 'pm': 'error'})
+            return HttpResponse(json.dumps(response_dict), mimetype='application/javascript')

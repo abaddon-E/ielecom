@@ -1,0 +1,65 @@
+{% load static %}
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="{% static "img/ups.png" %}" alt="First slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1 class="orange">فروش یو پی اس</h1>
+                  <p class="orange">فروش با کیفیت ترین برند یوپی اس های بازار ایران توانیرو, فاراتل و فاران </p>
+                  <p class="orange">تمامی دستگاه ها با گارانتی سازنده و خدمات پس از فروش این شرکت عرضه می گردد.</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="{% static "img/avr.png" %}" alt="First slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1 class="orange">ترانس و استابلایزر های فاراتل</h1>
+                  <p class="orange">از دستگاه های الکترونیکی خود به خوبی محافظت کنید و تنها ب قطع کردن برق توسط سیستم های محافظ اکتفا نکنید و همواره برق تنظیم و ثابت را به لوازم الکترونیکی منزل و محل کار خود تضمین کنید.</p>
+                  <p class="orange">با تغذیه برق ثابت عمر لوازم الکتریکی خود را افزایش دهید.</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="{% static "img/IT.jpg" %}" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1 class="orange">پشتیبانی  IT</h1>
+                  <p class="orange">شرکت صنایع الکترونیک و ارتباطات در زمینه فن آوری اطلاعات فعالیت های گسترده ای دارد که شامل :</p>
+                  <P CLASS="orange">(طراحی و راه اندازی شبکه های کامپیوتری , طراحی و برنامه نویسی وب , راه اندازی سرور های لینوکس  , نصب و راه اندازی دوربین های تحت شبکه و ...)</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="{% static "img/panasonic.png" %}" alt="Third slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1 class="orange">فروش و راه اندازی سیستم های مخابرات داخلی (سانترال ) پاناسونیک</h1>
+                  <p class="orange">سانترال های پاناسونیک با در اختیار گذاشتن امکاناتی گسترده در زمینه مخابرات داخلی پر طرفدار ترین و بهترین برند از این هیس است .</p>
+                  <p class="orange">صنایع الکترونیک و ارتباطات مفتخر است که در این زمینه فعالیت های گسترده ای دارد و با داشتن گروهی متخصص در این زمینه خدمات زیادی به سازمان ها و ادره های دولتی و خصوصی ارايه داده است .</p>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <img src="{%  static "img/battry.png" %}" alt="Second slide">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1 class="orange">کابینت باتری و انواع باتری های سیلد اسید</h1>
+                  <p class="orange">باتری های سیلد اسید مناسب ترین باتری برای یوپی اس ها می باشند این باتری ها با طول عمر مصرفی بالا بهترین بازده را دارا میباشند .</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+
+        </div><!-- /.carousel -->

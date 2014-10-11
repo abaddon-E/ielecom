@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% block slider %}
+    {% include "slider.html" %}
+{% endblock %}
+{% block content %}
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-orange btn-xs" data-toggle="offcanvas">لینکها</button>
+          </p>
+            <div class="pull-left visible-xs">
+                <a class=" btn btn-orange"  id="modal_key" data-toggle="modal" data-target="#follow">پیگیری تعمیرات</a>
+            </div>
+          <div class="jumbotron">
+            <h1>صنایع الکترونیک و ارتباطات</h1>
+            <p class="orange">فروش و عرضه خدمات گسترده در زمینه الکترونیک , مخابرات  داخلی وفناوری</p>
+          </div>
+          <div class="row">
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h2>یو پی اس (ups)</h2>
+              <p>منبع برق می باشد که در زمان قطع برق شهری بدون وقفه ولتاژ مصرف کننده را تامین می کند </p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h2> ترانس و استابلایزر </h2>
+              <p>تثبیت کننده ی برق در هنگام کاهش یا افزایش ولتاژ برق شهری</p>
+            </div><!--/span-->
+            <div class="col-6 col-sm-6 col-lg-4">
+              <h2>سانترال</h2>
+              <p>سانترال یا همان مخابرات داخلی در راستای بهینه سازی در مصرف خطوط تلفن و ارتباط داخلی بدون درگیر کردن خطوط اصلی میباشد.</p>
+            </div><!--/span-->
+
+          </div><!--/row-->
+        </div><!--/span-->
+
+        {% block sidebar %}
+            {% include "sidebar.html" %}
+        {% endblock sidebar %}
+      </div><!--/row-->
+{% endblock %}

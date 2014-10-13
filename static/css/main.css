@@ -191,7 +191,7 @@ footer {
   width: 100%;
   height: auto;
   padding: 1% 0 1% 0;
-  background: #ff3000;
+  background: #ff5e18;
   color: #ffffff;
   direction: ltr;
   text-align: center;
@@ -214,12 +214,12 @@ footer img {
     writing-mode: lr-tb;
 }
 .orange{
-    color: #ff3000;
+    color: #ff5e18;
 }
 .btn-orange{
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #ff3000;
+  background-color: #ff5e18;
 }
 .btn-orange:hover{
     background-color: #ff5000;
@@ -230,7 +230,7 @@ footer img {
     padding-bottom: 3%;
 }
 .about h3{
-     color: #ff3000;
+     color: #ff5e18;
 }
 .about p{
     padding-right: 2%;

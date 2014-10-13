@@ -23,7 +23,7 @@ from config import *
 SECRET_KEY = 'wu#cpby+(p$usrz1*bb3cj9yu_yuwug@(jn2n%_xd)fvwh$ooe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = True
 TEMPLATE_DIRS = (
@@ -48,7 +48,6 @@ INSTALLED_APPS = (
     'contact',
     'maintenance',
     'randomslugfield',
-    'hitcount',
 )
 
 MIDDLEWARE_CLASSES = (

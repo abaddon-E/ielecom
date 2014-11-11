@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="shortcut icon" href="{% static "img/logo.png" %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>{% trans 'name' %}{{ title }}</title>
+    <link href="{% static "css/resid.css" %}" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+  </head>
+  <body>
+    <div id="print">
+    <div class="content">
+      <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">
+        <h3>تاریخ :  {{date}}</h3>
+      </div>
+
+      <!-- Table -->
+      <table class="table">
+          <tr class="head">
+            <th class="num">#</th>
+            <th>کد پیگیری</th>
+            <th>نام مالک</th>
+            <th>مدل دستگاه</th>
+          </tr>
+          <tr>
+            <th>{{num}}</th>
+            <th>{{follow}}</th>
+            <th>{{name}}</th>
+            <th>{{model}}</th>
+          </tr>
+          <tr>
+            <th>{{num_2}}</th>
+            <th>{{follow_2}}</th>
+            <th>{{name_2}}</th>
+            <th>{{model_2}}</th>
+          </tr>
+          <tr>
+            <th>{{num_3}}</th>
+            <th>{{follow_3}}</th>
+            <th>{{name_3}}</th>
+            <th>{{model_3}}</th>
+          </tr>
+      </table>
+      <div>
+        <h4>توضیحات:</h4>
+        <p>در حفظ و نگهداری این رسید کوشا باشید.</p>
+        <p>شما میتوانید با کد پیگیری خود در سایت شرکت از وضعیت دستگاه خود مطلع شوید یا با تماس تلفنی و ارائه کد پیکیری اطلاعات لازم را کسب کنید.</p>
+        <h4>www.ielecom.org</h4>
+        <br>
+        <br>
+        <h4>مهر و امضا</h4>
+      </div>
+      </div>
+      </div>
+      <div class="tools">
+      <button type="button" class="btn btn-lg btn-info pull-right" onclick="printDiv('print')">
+        چاپ کن
+      </button>
+      <a href="/admin/maintenance" class="btn btn-lg btn-success">بازگشت</a>
+    </div>
+  </body>
+<script src={% static "js/jquery-1.9.1.min.js" %}></script>
+<script src={% static "js/bootstrap.min.js" %}></script>
+<script>
+ function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
+    </div>
+</html>

@@ -1,0 +1,15 @@
+.content{
+   direction: rtl;
+   margin: 17% 5% 0 5%;
+}
+.num{
+   width: 5px;
+}
+.head {
+   Background: #969191;
+   font-size: medium;
+   border-bottom: black;
+}
+.tools {
+   margin: 1% 5% 2% 5%;
+}

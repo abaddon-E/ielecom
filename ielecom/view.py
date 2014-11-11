@@ -8,7 +8,6 @@ from contact.models import *
 import datetime
 from sendfile import sendfile
 from django.utils.translation import ugettext as _
-from reportlab.pdfgen import canvas
 
 
 

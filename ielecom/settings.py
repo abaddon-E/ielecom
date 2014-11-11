@@ -48,7 +48,6 @@ INSTALLED_APPS = (
     'contact',
     'maintenance',
     'randomslugfield',
-    'easy_pdf',
 )
 
 MIDDLEWARE_CLASSES = (

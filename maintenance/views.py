@@ -2,7 +2,7 @@ from django.http import *
 import json
 from ielecom.form import *
 from maintenance.models import *
-from django.core.mail import send_mail
+from django.utils.translation import ugettext as _
 
 
 def follow_d(request):
@@ -12,26 +12,20 @@ def follow_d(request):
         if form. is_valid():
             try:
                 db = FollowM.objects.get(serial=request.POST['serial'])
-                status = str(db.status)
-                if status == 'Wait':
-                    status_pm = ' is waiting for check'
-                elif status == 'Check':
-                    status_pm = ' is chacking call for price'
-                else:
-                    status_pm = ' successfully repaired'
-
-                detail = str(db.device)
-                detail_split = detail.split(' ==> ')
-                device = detail_split[0]
-                customer = detail_split[1]
-                response.update({'pm': 'success', 'message': 'Hi dear '+customer+' your device  '+device+' '+status_pm})
-                return HttpResponse(json.dumps(response), mimetype='application/javascript')
             except:
-                response.update({'pm': 'error', 'message': 'not_save'})
-                return HttpResponse(json.dumps(response), mimetype='application/javascript')
-
+                response.update({'pm': 'error', 'message': _('not_save')})
+                return HttpResponse(json.dumps(response))
+            # -*- coding: utf-8 -*-
+            status = db.status
+            if status == 'Wait':
+                status_pm = _(' is waiting for check')
+            elif status == 'Check':
+                status_pm = _(' is chacking call for price')
+            else:
+                status_pm = _(' successfully repaired')
+            response.update({'pm': 'success', 'message': _(' your device  ')+status_pm})
+            return HttpResponse(json.dumps(response))
 
         else:
-            response.update({'pm': 'error', 'message': 'validetor_error'})
-            return HttpResponse(json.dumps(response), mimetype='application/javascript')
-
+            response.update({'pm': 'error', 'message': _('validetor_error')})
+            return HttpResponse(json.dumps(response))

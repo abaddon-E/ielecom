@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^contact_form', contact),
     url(r'^about', about),
     url(r'^download/$',download),
+    url(r'pdf/$', hello_pdf),
 
 
     # url(r'^blog/', include('blog.urls')),

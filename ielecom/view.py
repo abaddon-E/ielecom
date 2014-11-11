@@ -7,6 +7,9 @@ from ielecom.form import *
 from contact.models import *
 import datetime
 from sendfile import sendfile
+from django.utils.translation import ugettext as _
+from reportlab.pdfgen import canvas
+
 
 
 def on_load(request):
@@ -42,12 +45,14 @@ def subscribe(request):
             db_save = Email(email=email, ip=client_ip, date=date)
             db_save.save()
             response_dict.update({'pm': 'success'})
-            return HttpResponse(json.dumps(response_dict), mimetype='application/javascript')
+            return HttpResponse(json.dumps(response_dict))
 
         else:
             send = "server validation error"
             response_dict.update({'server_response': send, 'pm': 'error'})
-            return HttpResponse(json.dumps(response_dict), mimetype='application/javascript')
+            return HttpResponse(json.dumps(response_dict))
+
+#coding: utf-8
 
 
 def contact(request):
@@ -56,18 +61,20 @@ def contact(request):
         response_dict = {}
         if form. is_valid():
             date = datetime.datetime.today()
+            subject = request.POST['subject']
+            message = request.POST['message']
             db_save = Contact(
-                subject=request.POST['subject'], email=request.POST['email'],
-                message=request.POST['message'], date=date,
+                subject=subject, email=request.POST['email'],
+                message=message, date=date,
                 ip=request.META['REMOTE_ADDR']
             )
             db_save.save()
-            response_dict.update({'pm': 'success', 'message': 'your post success'})
-            return HttpResponse(json.dumps(response_dict), mimetype='application/javascript')
+            response_dict.update({'pm': 'success', 'message': _('your post success')})
+            return HttpResponse(json.dumps(response_dict))
         else:
-            send = "server validator error"
+            send = _("server validator error")
             response_dict.update({'message': send, 'pm': 'error'})
-            return HttpResponse(json.dumps(response_dict), mimetype='application/javascript')
+            return HttpResponse(json.dumps(response_dict))
 
 
 def download(request):
@@ -80,3 +87,17 @@ def download(request):
     except:
         return render_to_response('404.html', context_instance=RequestContext(request))
 
+
+def hello_pdf(request):
+# Create the HttpResponse object with the appropriate PDF headers.
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename=hello.pdf'
+# Create the PDF object, using the response object as its "file."
+    p = canvas.Canvas(response)
+# Draw things on the PDF. Here's where the PDF generation happens.
+# See the ReportLab documentation for the full list of functionality.
+    p.drawString(100, 100, "Hello world.")
+# Close the PDF object cleanly, and we're done.
+    p.showPage()
+    p.save()
+    return response

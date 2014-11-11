@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load i18n %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -8,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>{{ title }}</title>
+    <title>{% trans 'name' %}{{ title }}</title>
     <!-- Bootstrap core CSS -->
     <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
     <link href="{% static "css/bootstrapValidator.min.css" %}" rel="stylesheet">
@@ -135,7 +136,7 @@
             $("#CheckSerial").click(function() {
                     $('#CheckSerial').attr('disabled','disabled');
                     $("#alert").remove();
-                    $('#result_follow').append("<div id='alert' class='alert alert-info'><div class='glyphicon glyphicon-refresh glyphicon-refresh-animate'> PLZ wait...</div></div>");
+                    $('#result_follow').append("<div id='alert' class='alert alert-info'><div class='glyphicon glyphicon-refresh glyphicon-refresh-animate'>اطفا چند لحظه صبر کنید ...</div></div>");
                     var input_string = $("#id_serial").val();
                     $.ajax({
                         url : "/maintenance",
@@ -157,7 +158,7 @@
                                 }
                             },
                             error : function(xhr,errmsg,err) {
-                                alert(xhr.status + ": متاسفانه خطایی رخ داده است لطفا بعدا تلاش کنید" );
+                                alert(xhr.status + ": " + xhr.responseText);
                             }
                     });
                     return false;
@@ -195,7 +196,7 @@
                                 }
                             },
                             error : function(xhr,errmsg,err) {
-                                alert(xhr.status + ": متاسفانه خطایی رخ داده است لطفا بعدا تلاش کنید" );
+                                alert(xhr.status + ": " + xhr.responseText);
                             }
                     });
                     return false;

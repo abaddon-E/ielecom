@@ -1,4 +1,8 @@
 from django.db import models
+from django.utils.translation import ugettext as _
+
+#coding: utf-8
+#-*- encoding=UTF-8 -*-
 
 
 class Contact(models.Model):
@@ -9,7 +13,11 @@ class Contact(models.Model):
     ip = models.IPAddressField()
 
     def __unicode__(self):
-        return u'%s %s %s %s %s' % (self.subject, self.email, self.message, self.date, self.ip)
+        return self.email
+
+    class Meta:
+        verbose_name = _('Message')
+        verbose_name_plural = _('Message')
 
 
 class Email(models.Model):

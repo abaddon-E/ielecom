@@ -12,4 +12,5 @@ class Subscribe(forms.Form):
 
 
 class FollowF(forms.Form):
-    serial = forms.IntegerField(min_value=100000,max_value=999999, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    serial = forms.IntegerField(min_value=100000,max_value=999999,
+                                widget=forms.TextInput(attrs={'class': 'form-control'}))

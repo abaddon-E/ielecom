@@ -27,7 +27,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, "Template")
+    os.path.join(BASE_DIR, "Template"),
 )
 
 ALLOWED_HOSTS = [
@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'contact',
     'maintenance',
     'randomslugfield',
+    'easy_pdf',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -99,6 +100,9 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+LOCALE_PATHS = (
+    '/var/sites/ielecom/locale',
+)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 STATIC_URL = '/static/'

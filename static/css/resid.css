@@ -1,6 +1,6 @@
 .content{
    direction: rtl;
-   margin: 10% 5% 0 5%;
+   margin: 15% 0 0 0;
 }
 .num{
    width: 5px;
@@ -11,17 +11,9 @@
    border-bottom: black;
 }
 .tools {
-   margin: 1% 5% 2% 5%;
+   margin: 1% 5% 4% 5%;
 }
-.head_logo {
-    margin-bottom: 1%;
-    text-align: center;
-}
-.r-footer {
-    margin-top: 8%;
+.detail {
+    margin: 0 1% 0 1%;
     font-size: 1.4em;
-}
-.r-footer h3{
-    font-size: 1.7em;
-    text-align: center;
 }

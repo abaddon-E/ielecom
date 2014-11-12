@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-10 22:08+0000\n"
+"POT-Creation-Date: 2014-11-12 19:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,15 +26,15 @@ msgstr "صنایع الکترونیک و ارتباطات"
 msgid "Message"
 msgstr "پیام ها"
 
-#: ielecom/settings.py:94
+#: ielecom/settings.py:93
 msgid "Persian"
 msgstr "فارسی"
 
-#: ielecom/view.py:72
+#: ielecom/view.py:71
 msgid "your post success"
 msgstr "پیام شما با موفقیت ثبت شد . با تشکر"
 
-#: ielecom/view.py:75
+#: ielecom/view.py:74
 msgid "server validator error"
 msgstr "لطفا فیلدها را با دقت پر کنید"
 
@@ -42,7 +42,7 @@ msgstr "لطفا فیلدها را با دقت پر کنید"
 msgid "You cant select more than three field for this action"
 msgstr "شما برای این عملگر تنها می توانید حد اکثر ۳ انتخاب داشته باشید."
 
-#: maintenance/admin.py:67
+#: maintenance/admin.py:78
 msgid "print that follow"
 msgstr "نمایش پرینت"
 
@@ -111,14 +111,18 @@ msgid "status"
 msgstr "وضعیت"
 
 #: maintenance/models.py:47
+msgid "detail"
+msgstr "اضحارات مشتری"
+
+#: maintenance/models.py:48
 msgid "date"
 msgstr "تاریخ"
 
-#: maintenance/models.py:53
+#: maintenance/models.py:54
 msgid "Follow"
 msgstr "پیگیری"
 
-#: maintenance/models.py:54
+#: maintenance/models.py:55
 msgid "follow"
 msgstr "پیگیری"
 

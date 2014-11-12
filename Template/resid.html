@@ -24,8 +24,6 @@
     <div id="print">
 
     <div class="content">
-      <img src="{% static "img/logo.png" %}" class="head_logo"/>
-
       <div class="panel panel-default">
       <!-- Default panel contents -->
       <div class="panel-heading">
@@ -40,42 +38,47 @@
             <th class="num">#</th>
             <th>کد پیگیری</th>
             <th>نام مالک</th>
+            <th>تلفن تماس</th>
             <th>مدل دستگاه</th>
+            <th>خلاصه مشکل دستگاه</th>
           </tr>
           <tr>
             <th>{{num}}</th>
             <th>{{follow}}</th>
             <th>{{name}}</th>
+            <th>{{ phone }}</th>
             <th>{{model}}</th>
+            <th>{{ detail }}</th>
           </tr>
           <tr>
             <th>{{num_2}}</th>
             <th>{{follow_2}}</th>
             <th>{{name_2}}</th>
+            <th>{{ phone_2 }}</th>
             <th>{{model_2}}</th>
+            <th>{{ detail_2 }}</th>
           </tr>
           <tr>
             <th>{{num_3}}</th>
             <th>{{follow_3}}</th>
             <th>{{name_3}}</th>
+            <th>{{ phone_3 }}</th>
             <th>{{model_3}}</th>
+            <th>{{ detail_3 }}</th>
           </tr>
       </table>
-      <div>
+      <div class="detail">
         <h4>توضیحات:</h4>
         <p>در حفظ و نگهداری این رسید کوشا باشید.</p>
         <p>شما میتوانید با کد پیگیری خود در سایت شرکت از وضعیت دستگاه خود مطلع شوید یا با تماس تلفنی و ارائه کد پیکیری اطلاعات لازم را کسب کنید.</p>
-
+        <p>این رسید ۲ ماه اعتبار دارد و بعد از اتمام اعتبار این رسید شرکت هیچگونه تعهدی نسبت به دستگاه تعمیری ندارد.</p>
+         <h3>www.ielecom.org</h3>
         <br>
         <br>
         <h4 class="pull-left">مهر و امضا</h4>
+        <h4>امضای مشتری</h4>
       </div>
-          <div class="r-footer">
-              <p>آدرس : اندیشه فاز ۲ نبش بلوار یاس جنوبی</p>
-              <p>تلفن :  ۰۲۱۶۵۵۴۲۳۷۵ - ۰۲۱۶۵۵۴۱۹۰۰</p>
-              <p>ایمیل : info@ielecom.org</p>
-              <h3>www.ielecom.org</h3>
-          </div>
+
       </div>
       </div>
         </div>

@@ -43,7 +43,8 @@ class FollowM(models.Model):
                              exclude_lower=True, exclude_upper=True,
                              exclude_vowels=True, verbose_name=_('follow_serial'))
     status = models.CharField(max_length=7, choices=status_choices, default=in_wait, verbose_name=_('status'))
-    device = models.ForeignKey(Device,verbose_name=_('device'))
+    device = models.ForeignKey(Device, verbose_name=_('device'))
+    detail = models.TextField(verbose_name=_('detail'))
     date = models.DateField(verbose_name=_('date'))
 
     def __unicode__(self):

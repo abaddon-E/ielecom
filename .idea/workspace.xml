@@ -45,11 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resid.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="resid.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/resid.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4293948" vertical-offset="1034" max-vertical-offset="1890">
+            <state vertical-scroll-proportion="-11.037037" vertical-offset="1034" max-vertical-offset="1890">
               <caret line="74" column="39" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ielecom/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.46594006" vertical-offset="108" max-vertical-offset="2304">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -109,9 +119,9 @@
         <option value="$PROJECT_DIR$/maintenance/models.py" />
         <option value="$PROJECT_DIR$/maintenance/views.py" />
         <option value="$PROJECT_DIR$/maintenance/admin.py" />
-        <option value="$PROJECT_DIR$/ielecom/settings.py" />
         <option value="$PROJECT_DIR$/static/css/resid.css" />
         <option value="$PROJECT_DIR$/Template/resid.html" />
+        <option value="$PROJECT_DIR$/ielecom/settings.py" />
       </list>
     </option>
   </component>
@@ -873,14 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ielecom/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48236954" vertical-offset="108" max-vertical-offset="2304">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/maintenance/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
@@ -909,8 +911,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Template/resid.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4293948" vertical-offset="1034" max-vertical-offset="1890">
+        <state vertical-scroll-proportion="-11.037037" vertical-offset="1034" max-vertical-offset="1890">
           <caret line="74" column="39" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ielecom/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46594006" vertical-offset="108" max-vertical-offset="2304">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding />
         </state>
       </provider>

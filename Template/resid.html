@@ -15,12 +15,23 @@
     <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
   </head>
   <body>
+  <div class="tools">
+      <button type="button" class="btn btn-lg btn-info pull-right" onclick="printDiv('print')">
+        چاپ کن
+      </button>
+      <a href="/admin/maintenance" class="btn btn-lg btn-success">بازگشت</a>
+    </div>
     <div id="print">
+
     <div class="content">
+      <img src="{% static "img/logo.png" %}" class="head_logo"/>
+
       <div class="panel panel-default">
       <!-- Default panel contents -->
       <div class="panel-heading">
+          <h3 class="pull-left">رسید تعمیرات</h3>
         <h3>تاریخ :  {{date}}</h3>
+
       </div>
 
       <!-- Table -->
@@ -54,19 +65,21 @@
         <h4>توضیحات:</h4>
         <p>در حفظ و نگهداری این رسید کوشا باشید.</p>
         <p>شما میتوانید با کد پیگیری خود در سایت شرکت از وضعیت دستگاه خود مطلع شوید یا با تماس تلفنی و ارائه کد پیکیری اطلاعات لازم را کسب کنید.</p>
-        <h4>www.ielecom.org</h4>
+
         <br>
         <br>
-        <h4>مهر و امضا</h4>
+        <h4 class="pull-left">مهر و امضا</h4>
+      </div>
+          <div class="r-footer">
+              <p>آدرس : اندیشه فاز ۲ نبش بلوار یاس جنوبی</p>
+              <p>تلفن :  ۰۲۱۶۵۵۴۲۳۷۵ - ۰۲۱۶۵۵۴۱۹۰۰</p>
+              <p>ایمیل : info@ielecom.org</p>
+              <h3>www.ielecom.org</h3>
+          </div>
       </div>
       </div>
-      </div>
-      <div class="tools">
-      <button type="button" class="btn btn-lg btn-info pull-right" onclick="printDiv('print')">
-        چاپ کن
-      </button>
-      <a href="/admin/maintenance" class="btn btn-lg btn-success">بازگشت</a>
-    </div>
+        </div>
+
   </body>
 <script src={% static "js/jquery-1.9.1.min.js" %}></script>
 <script src={% static "js/bootstrap.min.js" %}></script>
@@ -82,5 +95,5 @@
      document.body.innerHTML = originalContents;
 }
 </script>
-    </div>
+
 </html>

@@ -1,6 +1,6 @@
 .content{
    direction: rtl;
-   margin: 17% 5% 0 5%;
+   margin: 10% 5% 0 5%;
 }
 .num{
    width: 5px;
@@ -12,4 +12,16 @@
 }
 .tools {
    margin: 1% 5% 2% 5%;
+}
+.head_logo {
+    margin-bottom: 1%;
+    text-align: center;
+}
+.r-footer {
+    margin-top: 8%;
+    font-size: 1.4em;
+}
+.r-footer h3{
+    font-size: 1.7em;
+    text-align: center;
 }

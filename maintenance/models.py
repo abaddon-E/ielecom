@@ -23,7 +23,7 @@ class Device(models.Model):
     last_service = models.DateField(null=True, blank=True, verbose_name=_('last_service'))
 
     def __unicode__(self):
-        return u'%s ==> %s' % (self.model, self.own)
+        return u'%s ==> %s ==> %s' % (self.model, self.own, self.sn)
 
     class Meta:
         verbose_name = _('Device')
@@ -53,5 +53,3 @@ class FollowM(models.Model):
     class Meta:
         verbose_name = _('Follow')
         verbose_name_plural = _('follow')
-
-

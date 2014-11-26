@@ -34,7 +34,7 @@ def print_follow(self, request, queryset):
         detail = db.detail
         try:
             owner_db = Customer.objects.get(fullname=owner)
-            if len(owner_db.phone) > 1:
+            if len(str(owner_db.phone)) > 1:
                 phone = str(owner_db.phone)
             else:
                 phone = str(owner_db.mobile)

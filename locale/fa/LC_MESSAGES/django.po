@@ -39,8 +39,8 @@ msgid "server validator error"
 msgstr "لطفا فیلدها را با دقت پر کنید"
 
 #: maintenance/admin.py:23
-msgid "You cant select more than three field for this action"
-msgstr "شما برای این عملگر تنها می توانید حد اکثر ۳ انتخاب داشته باشید."
+msgid "You cant select more than four field for this action"
+msgstr "شما برای این عملگر تنها می توانید حد اکثر ۴ انتخاب داشته باشید."
 
 #: maintenance/admin.py:78
 msgid "print that follow"

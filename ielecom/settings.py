@@ -23,9 +23,9 @@ from config import *
 SECRET_KEY = 'wu#cpby+(p$usrz1*bb3cj9yu_yuwug@(jn2n%_xd)fvwh$ooe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, "Template"),
 )
